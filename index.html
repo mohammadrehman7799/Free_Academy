@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Academy — Education Without Boundaries</title>
+    <meta name="description"
+        content="Free Academy: Open-source, free education for everyone. No exams, no grades, no obligations. A lifetime community where anyone can teach and anyone can learn.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="progress"></div>
+    <div class="loader"><span class="loader-logo">Free<span>Academy</span></span>
+        <div class="loader-bar-wrap">
+            <div class="loader-bar"></div>
+        </div>
+    </div>
+    <div class="cur-d"></div>
+    <div class="cur-r"></div>
+    <div class="grid-bg"></div>
+    <canvas id="particles"></canvas>
+
+    <nav id="navbar">
+        <a href="#home" class="nav-logo">Free<span>Academy</span></a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#values" onclick="closeMenu()">Values</a></li>
+            <li><a href="#philosophy" onclick="closeMenu()">Philosophy</a></li>
+            <li><a href="#community" onclick="closeMenu()">Community</a></li>
+            <li><a href="#meetings" onclick="closeMenu()">Meetings</a></li>
+            <li><a href="#join" class="nav-cta" onclick="closeMenu()">Join Us</a></li>
+        </ul>
+        <button class="hamburger" id="hamburger" onclick="toggleMenu()"
+            aria-label="Menu"><span></span><span></span><span></span></button>
+    </nav>
+
+    <section class="hero" id="home">
+        <div class="hero-glow g1"></div>
+        <div class="hero-glow g2"></div>
+        <div class="hero-glow g3"></div>
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+        <div class="shape shape-4"></div>
+        <div class="hero-badge"><span class="dot"></span> Open for Everyone</div>
+        <h1>
+            <span class="line"><span class="li">Welcome to</span></span>
+            <span class="line"><span class="li accent">Free Academy</span></span>
+        </h1>
+        <p class="hero-sub">A place where education is free, open-source, and without boundaries.<br>No exams. No
+            grades. No deadlines. Just humans learning together — forever.</p>
+        <div class="hero-btns">
+            <a href="#join" class="btn-p"><span>Become a Member</span></a>
+            <a href="#values" class="btn-s">Explore Values</a>
+        </div>
+        <div class="hero-scroll"><span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <div class="marquee">
+        <div class="m-track">
+            <span class="m-item">Free Education <span class="sep">✦</span></span><span class="m-item">Open Source <span
+                    class="sep">✦</span></span>
+            <span class="m-item">No Exams <span class="sep">✦</span></span><span class="m-item">No Grades <span
+                    class="sep">✦</span></span>
+            <span class="m-item">Peace & Love <span class="sep">✦</span></span><span class="m-item">No Obligations <span
+                    class="sep">✦</span></span>
+            <span class="m-item">Lifetime Community <span class="sep">✦</span></span><span class="m-item">Anyone Can
+                Teach <span class="sep">✦</span></span>
+            <span class="m-item">Learning Never Stops <span class="sep">✦</span></span><span class="m-item">Build
+                Together <span class="sep">✦</span></span>
+            <span class="m-item">Live Meetings <span class="sep">✦</span></span><span class="m-item">No Specialization
+                <span class="sep">✦</span></span>
+            <span class="m-item">Free Education <span class="sep">✦</span></span><span class="m-item">Open Source <span
+                    class="sep">✦</span></span>
+            <span class="m-item">No Exams <span class="sep">✦</span></span><span class="m-item">No Grades <span
+                    class="sep">✦</span></span>
+            <span class="m-item">Peace & Love <span class="sep">✦</span></span><span class="m-item">No Obligations <span
+                    class="sep">✦</span></span>
+            <span class="m-item">Lifetime Community <span class="sep">✦</span></span><span class="m-item">Anyone Can
+                Teach <span class="sep">✦</span></span>
+            <span class="m-item">Learning Never Stops <span class="sep">✦</span></span><span class="m-item">Build
+                Together <span class="sep">✦</span></span>
+            <span class="m-item">Live Meetings <span class="sep">✦</span></span><span class="m-item">No Specialization
+                <span class="sep">✦</span></span>
+        </div>
+    </div>
+
+    <section class="values" id="values">
+        <div class="s-head rv">
+            <p class="s-label">Our Values</p>
+            <h2>Education Reimagined<br>From the Ground Up</h2>
+            <p>We stripped away everything that makes traditional education stressful, and kept everything that makes
+                learning beautiful.</p>
+        </div>
+        <div class="values-grid">
+            <div class="v-card rv-3d d1"><span class="v-icon">🆓</span>
+                <div class="v-line"></div>
+                <h3>Free Education</h3>
+                <p>Knowledge should never have a price tag. Every course, every resource — completely free, forever.</p>
+            </div>
+            <div class="v-card rv-3d d2"><span class="v-icon">📖</span>
+                <div class="v-line"></div>
+                <h3>Open Source</h3>
+                <p>All curriculum, materials, and platforms are open-source. Fork it, improve it, share it.</p>
+            </div>
+            <div class="v-card rv-3d d3"><span class="v-icon">🚫</span>
+                <div class="v-line"></div>
+                <h3>No Exams or Grades</h3>
+                <p>We don't rank humans. No tests, no scores. Curiosity is the only measure that matters.</p>
+            </div>
+            <div class="v-card rv-3d d4"><span class="v-icon">⏳</span>
+                <div class="v-line"></div>
+                <h3>No Time Restrictions</h3>
+                <p>Learn at midnight or sunrise. No semesters, no deadlines. Time is yours to use freely.</p>
+            </div>
+            <div class="v-card rv-3d d5"><span class="v-icon">☮️</span>
+                <div class="v-line"></div>
+                <h3>Peace & Love</h3>
+                <p>A space of mutual respect, empathy, and support. Kindness as a foundation for growth.</p>
+            </div>
+            <div class="v-card rv-3d d6"><span class="v-icon">🔓</span>
+                <div class="v-line"></div>
+                <h3>No Obligations</h3>
+                <p>No mandatory attendance. Come when you want, leave when you need, return whenever.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="philosophy" id="philosophy">
+        <div class="s-head rv">
+            <p class="s-label">Our Philosophy</p>
+            <h2>What We Truly Believe</h2>
+            <p>A manifesto built on trust, freedom, and the radical idea that people learn best when they're free.</p>
+        </div>
+        <div class="man-grid">
+            <div class="man-item rv d1"><span class="man-num">01</span>
+                <div>
+                    <h4>No Forceful Specialization</h4>
+                    <p>Explore everything. Be a poet and a programmer, a musician and a mathematician.</p>
+                </div>
+            </div>
+            <div class="man-item rv d2"><span class="man-num">02</span>
+                <div>
+                    <h4>No Graduation</h4>
+                    <p>Learning doesn't end with a ceremony. Growth is infinite and continuous.</p>
+                </div>
+            </div>
+            <div class="man-item rv d3"><span class="man-num">03</span>
+                <div>
+                    <h4>Learning Never Stops</h4>
+                    <p>From childhood to old age, the doors are always open. Lifelong learning is our structure.</p>
+                </div>
+            </div>
+            <div class="man-item rv d4"><span class="man-num">04</span>
+                <div>
+                    <h4>Anyone Can Teach, Anyone Can Learn</h4>
+                    <p>Everyone has something to share, and everyone has something to discover.</p>
+                </div>
+            </div>
+            <div class="man-item rv d5"><span class="man-num">05</span>
+                <div>
+                    <h4>No Strict Rules</h4>
+                    <p>We guide, we don't govern. Creativity thrives in freedom, not regulation.</p>
+                </div>
+            </div>
+            <div class="man-item rv d6"><span class="man-num">06</span>
+                <div>
+                    <h4>Open for Everyone</h4>
+                    <p>No age limits, no prerequisites, no boundaries. If you want to learn, you belong.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="quote-s">
+        <div class="q-marks rv">"</div>
+        <p class="q-text rv d1">Education is not the filling of a pail, but the lighting of a fire.</p>
+    </section>
+
+    <div class="counters rv">
+        <div class="c-item">
+            <div class="c-num" data-target="0" data-suffix="$">0</div>
+            <div class="c-label">Cost Forever</div>
+        </div>
+        <div class="c-item">
+            <div class="c-num" data-target="100" data-suffix="%">0</div>
+            <div class="c-label">Open Source</div>
+        </div>
+        <div class="c-item">
+            <div class="c-num" data-target="0" data-suffix="">0</div>
+            <div class="c-label">Exams Ever</div>
+        </div>
+        <div class="c-item">
+            <div class="c-num" data-target="365" data-suffix="">0</div>
+            <div class="c-label">Days Open</div>
+        </div>
+    </div>
+
+    <section class="community" id="community">
+        <div class="s-head rv">
+            <p class="s-label">Community</p>
+            <h2>Build Together.<br>Grow Together.</h2>
+            <p>A lifetime community where people create, collaborate, and build real things.</p>
+        </div>
+        <div class="com-grid">
+            <div class="com-card rv-3d d1"><span class="com-emoji">🛠️</span>
+                <h3>Create Projects</h3>
+                <p>Form teams, brainstorm ideas, build real-world projects that matter.</p>
+            </div>
+            <div class="com-card rv-3d d2"><span class="com-emoji">🤝</span>
+                <h3>Build Together</h3>
+                <p>Collaboration over competition. Create things that matter, together.</p>
+            </div>
+            <div class="com-card rv-3d d3"><span class="com-emoji">♾️</span>
+                <h3>Membership Forever</h3>
+                <p>Once you join, you're family. No expiration. Permanent.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="meetings" id="meetings">
+        <div class="meet-wrap">
+            <div class="meet-info rv">
+                <p class="s-label">Live Sessions</p>
+                <h3>Real Conversations.<br>Real Connections.</h3>
+                <p>Join live meetings where members share knowledge, discuss ideas, and learn in real-time. No
+                    formalities — just open, honest conversations.</p>
+                <p>Sessions are always optional. Drop in, listen, or lead a discussion.</p>
+                <a href="#join" class="btn-p" style="display:inline-block;margin-top:20px"><span>Join a
+                        Session</span></a>
+            </div>
+            <div class="meet-vis rv d2">
+                <span class="big">🎙️</span>
+                <p>Live Meetings</p>
+                <p class="sub">Open mic. Open minds.<br>No scripts. Just humans.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="join" id="join">
+        <h2 class="rv">Start Your<br><span class="accent">Forever Journey</span></h2>
+        <p class="rv d1">No fees. No forms. No barriers.<br>Enter your email and you're in — for life.</p>
+        <form class="join-form rv d2" onsubmit="handleJoin(event)">
+            <input type="email" id="joinEmail" placeholder="your@email.com" required>
+            <button type="submit">Join Free</button>
+        </form>
+        <p class="join-note rv d3">Lifetime membership · Zero cost · Unsubscribe never</p>
+    </section>
+
+    <footer>
+        <div class="f-links"><a href="#home">Home</a><a href="#values">Values</a><a href="#philosophy">Philosophy</a><a
+                href="#community">Community</a><a href="#meetings">Meetings</a></div>
+        <div class="f-logo">Free<span>Academy</span></div>
+        <p class="copy">&copy; 2026 Free Academy — Education Without Boundaries</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
