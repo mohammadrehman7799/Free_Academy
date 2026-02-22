@@ -50,7 +50,7 @@ let crx = -100, cry = -100;
 document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; cd.style.left = e.clientX - 2.5 + 'px'; cd.style.top = e.clientY - 2.5 + 'px' });
 function uCur() { crx += (mx - crx) * .08; cry += (my - cry) * .08; cr.style.left = crx - 20 + 'px'; cr.style.top = cry - 20 + 'px'; requestAnimationFrame(uCur) } uCur();
 
-document.querySelectorAll('a,button,.v-card,.man-item,.com-card,.meet-vis').forEach(el => {
+document.querySelectorAll('a,button,.v-card,.man-item,.com-card,.meet-vis,.discord-card,.discord-btn').forEach(el => {
     el.addEventListener('mouseenter', () => cr.classList.add('hov'));
     el.addEventListener('mouseleave', () => cr.classList.remove('hov'))
 });

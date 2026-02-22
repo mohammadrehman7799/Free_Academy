@@ -1021,6 +1021,202 @@ section {
     line-height: 1.75
 }
 
+/* ===== DISCORD ===== */
+.discord {
+    border-top: 1px solid var(--b1);
+    position: relative;
+    overflow: hidden
+}
+
+.discord-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, rgba(88, 101, 242, .06) 0%, transparent 55%);
+    border-radius: 50%;
+    animation: drift 20s ease-in-out infinite;
+    pointer-events: none
+}
+
+.discord-accent {
+    background: linear-gradient(135deg, #5865F2, #7289DA);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text
+}
+
+.discord-card {
+    max-width: 680px;
+    margin: 0 auto
+}
+
+.discord-card-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    padding: 56px 48px;
+    border-radius: var(--rl);
+    border: 1px solid rgba(88, 101, 242, .15);
+    background: linear-gradient(135deg, rgba(88, 101, 242, .04), rgba(3, 3, 4, .8));
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    position: relative;
+    overflow: hidden;
+    transition: all .5s var(--ease)
+}
+
+.discord-card-inner::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: conic-gradient(from 180deg, transparent, rgba(88, 101, 242, .15) 8%, transparent 16%);
+    border-radius: inherit;
+    animation: bSpin 12s linear infinite;
+    z-index: -1
+}
+
+.discord-card-inner:hover {
+    border-color: rgba(88, 101, 242, .3);
+    transform: translateY(-4px);
+    box-shadow: 0 20px 80px rgba(88, 101, 242, .08)
+}
+
+.discord-icon-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.discord-icon {
+    width: 56px;
+    height: 56px;
+    color: #5865F2;
+    position: relative;
+    z-index: 1;
+    filter: drop-shadow(0 0 20px rgba(88, 101, 242, .3))
+}
+
+.discord-pulse {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 1px solid rgba(88, 101, 242, .2);
+    animation: discordPulse 3s ease-out infinite
+}
+
+.discord-pulse.p2 {
+    animation-delay: 1.5s
+}
+
+@keyframes discordPulse {
+    0% {
+        transform: scale(.6);
+        opacity: 1
+    }
+
+    100% {
+        transform: scale(1.8);
+        opacity: 0
+    }
+}
+
+.discord-info {
+    text-align: center
+}
+
+.discord-info h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--w);
+    letter-spacing: -.5px;
+    margin-bottom: 8px
+}
+
+.discord-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 20px
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    background: #3BA55D;
+    border-radius: 50%;
+    animation: pulse 2.5s infinite
+}
+
+.discord-status span:last-child {
+    font-size: .8rem;
+    color: var(--w30);
+    letter-spacing: .3px
+}
+
+.discord-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center
+}
+
+.df-tag {
+    padding: 6px 14px;
+    border-radius: var(--rx);
+    background: var(--w04);
+    border: 1px solid var(--w08);
+    font-size: .72rem;
+    color: var(--w50);
+    letter-spacing: .3px;
+    transition: all .3s
+}
+
+.df-tag:hover {
+    background: rgba(88, 101, 242, .08);
+    border-color: rgba(88, 101, 242, .2);
+    color: var(--w80)
+}
+
+.discord-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 40px;
+    border-radius: var(--rx);
+    background: #5865F2;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: .95rem;
+    transition: all .4s var(--ease);
+    border: 0;
+    cursor: pointer;
+    letter-spacing: .2px
+}
+
+.discord-btn:hover {
+    background: #4752C4;
+    transform: translateY(-3px) scale(1.04);
+    box-shadow: 0 8px 40px rgba(88, 101, 242, .3)
+}
+
+.discord-btn svg {
+    transition: transform .3s var(--spring)
+}
+
+.discord-btn:hover svg {
+    transform: scale(1.15) rotate(-5deg)
+}
+
 /* ===== MEETINGS ===== */
 .meetings {
     border-top: 1px solid var(--b1)
